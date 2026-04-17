@@ -13,7 +13,7 @@ from tools.search import parse_json
 import streamlit as st
 
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
-TAVILY_API_KEY = st.secrets"TAVILY_API_KEY"]
+TAVILY_API_KEY = st.secrets["TAVILY_API_KEY"]
 
 llm = ChatOpenAI(
     base_url="https://api.groq.com/openai/v1",
