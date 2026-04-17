@@ -16,12 +16,15 @@ from tavily import TavilyClient
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
 
-load_dotenv()
+import streamlit as st
+
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+TAVILY_API_KEY = st.secrets"TAVILY_API_KEY"]
 
 # ─────────────────────────────────────────────
 # Tavily
 # ─────────────────────────────────────────────
-_tavily = TavilyClient(api_key="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")
+_tavily = TavilyClient(api_key=TAVILY_API_KEY)
 
 
 def web_search(query: str, max_results: int = 5) -> str:
