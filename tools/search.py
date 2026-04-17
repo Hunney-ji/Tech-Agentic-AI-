@@ -19,7 +19,7 @@ from qdrant_client.models import Distance, VectorParams, PointStruct
 import streamlit as st
 
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
-TAVILY_API_KEY = st.secrets"TAVILY_API_KEY"]
+TAVILY_API_KEY = st.secrets["TAVILY_API_KEY"]
 
 # ─────────────────────────────────────────────
 # Tavily
