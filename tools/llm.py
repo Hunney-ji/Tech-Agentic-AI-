@@ -9,8 +9,11 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from dotenv import load_dotenv
 from tools.search import parse_json
 
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
+import streamlit as st
+
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+TAVILY_API_KEY = st.secrets"TAVILY_API_KEY"]
 
 llm = ChatOpenAI(
     base_url="https://api.groq.com/openai/v1",
